@@ -1,2 +1,2 @@
 # karabiner-config
-Key binding shortcuts for karabiner elements.
+My key binding shortcuts customization for [karabiner elements](https://github.com/pqrs-org/Karabiner-Elements).

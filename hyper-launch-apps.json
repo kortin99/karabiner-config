@@ -1,0 +1,73 @@
+{
+  "title": "Launch MacOS apps",
+  "rules": [
+    {
+      "description": "Hyper + letter launch apps",
+      "manipulators": [
+        {
+          "description": "Hyper + C → Launch VSCode",
+          "from": {
+            "key_code": "c",
+            "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "left_command",
+                "left_control",
+                "left_option"
+              ],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open '/Applications/Visual Studio Code.app'"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "description": "Hyper + T → Launch Terminal",
+          "from": {
+            "key_code": "t",
+            "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "left_command",
+                "left_control",
+                "left_option"
+              ],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open '/Applications/Warp.app'"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "description": "Hyper + B → Launch Browser",
+          "from": {
+            "key_code": "b",
+            "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "left_command",
+                "left_control",
+                "left_option"
+              ],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open '/Applications/Arc.app'"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}

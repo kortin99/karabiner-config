@@ -1,0 +1,64 @@
+{
+  "title": "[kortin's] Caps Lock → Hyper Key (⌃⌥⇧⌘) (Caps Lock if alone)",
+  "rules": [
+    {
+      "description": "Caps Lock → Hyper Key (⌃⌥⇧⌘) (Caps Lock if alone)",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_shift",
+              "modifiers": ["left_command", "left_control", "left_option"]
+            }
+          ],
+          "to_if_alone": [
+            {
+              "hold_down_milliseconds": 100,
+              "key_code": "caps_lock"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Avoid starting sysdiagnose with the built-in macOS shortcut cmd+shift+option+ctrl+,",
+      "from": {
+        "key_code": "comma",
+        "modifiers": {
+          "mandatory": ["command", "shift", "option", "control"]
+        }
+      },
+      "to": [],
+      "type": "basic"
+    },
+    {
+      "description": "Avoid starting sysdiagnose with the built-in macOS shortcut cmd+shift+option+ctrl+.",
+      "from": {
+        "key_code": "period",
+        "modifiers": {
+          "mandatory": ["command", "shift", "option", "control"]
+        }
+      },
+      "to": [],
+      "type": "basic"
+    },
+    {
+      "from": {
+        "description": "Avoid starting sysdiagnose with the built-in macOS shortcut cmd+shift+option+ctrl+/",
+        "key_code": "slash",
+        "modifiers": {
+          "mandatory": ["command", "shift", "option", "control"]
+        }
+      },
+      "to": [],
+      "type": "basic"
+    }
+  ]
+}
